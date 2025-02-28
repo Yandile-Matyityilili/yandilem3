@@ -1,4 +1,5 @@
 <template>
+    <br><br>
     <div class="ready-meals container mt-4">
         <h2 class="text-center">Ready-Made Meals</h2>
 

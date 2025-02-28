@@ -10,7 +10,7 @@ import ClientDeliInterfaceView from '@/views/ClientDeliInterfaceView.vue';
 
 
 export default {
-    name: 'CluentDeliInterface',
+    name: 'ClientDeliInterface',
     props: {
         msg: String
     },

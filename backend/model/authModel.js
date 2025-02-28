@@ -30,9 +30,9 @@ const getSingleUser = async (first_name, last_name, email, create_password,confi
     }
 };
 
-const getSingleUserLogin = async (email,password) => {
+const getSingleUserLogin = async (email,create_password) => {
     try{
-        const [data] = await pool.query('SELECT * FROM login_customer_users  WHERE email = ? AND password = ?', [email,password]);
+        const [data] = await pool.query('SELECT * FROM register_customer_users  WHERE email = ? AND create_password = ?', [email,create_password]);
         return data;
     }catch(err){
         console.log(err);

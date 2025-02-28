@@ -12,9 +12,12 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/auth', authRouter)
+
 app.use('/mealkits', mealKitsRouter )
 app.use('/meals', readyMealsRouter)
 app.use('/delivery_information', deliveryInformationRouter)
+
+
 // app.get('/delivery_information',async (req, res)=>{
 //     res.json({deliveryInformation: await getDeliveryInformation()})
 // })

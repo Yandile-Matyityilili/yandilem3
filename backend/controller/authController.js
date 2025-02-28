@@ -4,10 +4,10 @@ import bcrypt from 'bcryptjs';
 dotenv.config();
 
 const getLogin = async (req, res) => {
-    const {email, password} = req.body;
-    const user = await getSingleUserLogin(email,password);
+    const {email, create_password} = req.body;
+    const user = await getSingleUserLogin(email,create_password);
     if(user.length > 0){
-        const validPassword = await bcrypt.compare(password,user[0].password);
+        const validPassword = await bcrypt.compare(create_password,user[0].create_password);
         if(validPassword){
             res.json({message: "Login successful"});
         }else{

@@ -12,12 +12,12 @@ import ClientDeliInterfaceView from '@/views/ClientDeliInterfaceView.vue';
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'home',
     component: HomeView
   },
   {
-    path: '/',
+    path: '/SignupPage',
     name: 'SignupPage',
     component: SignupView
   },
@@ -29,15 +29,8 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
-  //{
-   // path:'/checkout',
-    //component:CheckoutView
-  //},
   {
     path: '/ready-made-meals',
     component: ReadyMadeMeals
